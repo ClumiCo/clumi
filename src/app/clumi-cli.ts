@@ -1,6 +1,4 @@
-import prompts from 'prompts';
-
-type Provider = 'aws' | 'az' | 'oci' | 'nim'| 'np';
+type Provider = 'aws' | 'az' | 'oci' | 'nim' | 'np';
 
 async function clumi(args: string[]): Promise<void> {
   let provider: Provider = 'np';
@@ -28,21 +26,13 @@ async function clumi(args: string[]): Promise<void> {
       command = args.slice(1).join(' ');
       break;
     default:
-      console.error(`Unknown provider ${args[0]}`);
-      return;
+      provider = 'np';
+      command = args.join(' ');
+      // console.error(`Unknown provider ${args[0]}`);
   }
 
-  try {
-    const { command: userCommand } = await prompts({
-      type: 'text',
-      name: 'command',
-      message: `Enter the command for ${provider}`,
-      initial: command,
-    });
-    console.log(`Running clumi with provider '${provider}' and command '${userCommand}'`);
-  } catch (err) {
-    console.error('Error while executing prompts', err);
-  }
+  console.log(`Running clumi with provider '${provider}' and command '${command}'`);
+  return Promise.resolve();
 }
 
 clumi(process.argv.slice(2));

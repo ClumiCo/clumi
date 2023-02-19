@@ -15,6 +15,6 @@ class ClumiAPI {
             // reject(new Error('Operation failed'));
           });
     }
-}
+};
 
 export default ClumiAPI;
