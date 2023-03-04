@@ -2,6 +2,10 @@
 
 `The project is still in the early ideation, nothing currently is working !`
 
+![](./docs/clumi-colored.svg)
+
+
+
 Developers, it's time to say goodbye to costly cloud subscription fees and hello to Clumi - the new cloud emulator that lets you test your cloud solutions locally using your own dev box resources. Clumi is compatible with most popular cloud providers like AWS and Azure and requires minimal dependencies, making it the perfect tool for developers of all skill levels.
 
 With Clumi, you can easily test and debug your cloud solutions without incurring additional costs or using up valuable subscription resources. This not only saves you money but also allows you to work more efficiently by testing your solutions in a local environment. Once you've finished testing and verification, you can replicate your test environment on the real cloud with confidence that your solution is fully functional and ready for production.
@@ -15,7 +19,5 @@ For more information check out the [Architecture overview document](./docs/intro
 Contact:
 Clumi Team
 clumi@github.com
-
-![](./docs/Toothless.png)
 
 Note: The above is a sample press release and does not necessarily reflect the actual product or service.
