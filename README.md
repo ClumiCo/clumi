@@ -16,6 +16,8 @@ Clumi is a cloud emulator that allows developers to test their cloud solutions l
 
 For more information check out the [Architecture overview document](./docs/introduction.md)
 
+![](./docs/ArchitectureOvervire.jpg)
+
 Contact:
 Clumi Team
 clumi@github.com

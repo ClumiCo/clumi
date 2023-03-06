@@ -1,5 +1,5 @@
 {
-  "name": "clumi",
+  "name": "@clumico/clumi",
   "version": "1.0.0",
   "description": "cloud emulator for developers",
   "scripts": {

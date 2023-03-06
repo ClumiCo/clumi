@@ -4,6 +4,9 @@
 Clumi is a cloud emulator designed for developers, providing a local environment for testing and debugging cloud solutions. Clumi is compatible with most popular cloud providers such as AWS and Azure and requires minimal dependencies, making it accessible to developers of all skill levels. By using Clumi, developers can save money on cloud subscription fees and work more efficiently by testing their solutions in a local environment before deploying to the real cloud.
 
 ## Architecture Overview
+
+![](./ArchitectureOvervire.jpg)
+
 The Clumi architecture consists of several key components, including:
 
 ### Gateway: 
