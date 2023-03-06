@@ -1,4 +1,4 @@
-type Provider = 'aws' | 'az' | 'oci' | 'nim' | 'np';
+type Provider = 'aws' | 'az' | 'oci' | 'nim' | 'openstack' | 'np';
 
 async function clumi(args: string[]): Promise<void> {
   let provider: Provider = 'np';
@@ -19,6 +19,10 @@ async function clumi(args: string[]): Promise<void> {
       break;
     case 'nim': // Nimbella cloud provider emulator
       provider = 'nim';
+      command = args.slice(1).join(' ');
+      break;
+    case 'openstack': // OpenStack cloud provider emulator
+      provider = 'openstack';
       command = args.slice(1).join(' ');
       break;
     case 'np': // No specific provider, use generic emulator
