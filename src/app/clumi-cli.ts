@@ -1,7 +1,16 @@
+import * as fs from 'fs';
+import * as yaml from 'js-yaml';
+import { readConfig, writeConfig } from './config-utils';
+
 type Provider = 'aws' | 'az' | 'oci' | 'nim' | 'openstack' | 'np';
+const defaultProvider = "np";
+
+const configPath = 'config.yaml';
+
 
 async function clumi(args: string[]): Promise<void> {
-  let provider: Provider = 'np';
+  const config = readConfig();
+  let provider: Provider = defaultProvider;
   let command: string;
 
   switch (args[0]) {
@@ -30,12 +39,13 @@ async function clumi(args: string[]): Promise<void> {
       command = args.slice(1).join(' ');
       break;
     default:
-      provider = 'np';
+      provider = defaultProvider;
       command = args.join(' ');
       // console.error(`Unknown provider ${args[0]}`);
   }
 
   console.log(`Running clumi with provider '${provider}' and command '${command}'`);
+  writeConfig(config);
   return Promise.resolve();
 }
 
