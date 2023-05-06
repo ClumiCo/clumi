@@ -1,6 +1,6 @@
 {
-  "name": "@clumico/clumi",
-  "version": "1.0.0",
+  "name": "@clumi/clumi",
+  "version": "1.0.1",
   "description": "cloud emulator for developers",
   "scripts": {
     "build": "tsc -p .",
